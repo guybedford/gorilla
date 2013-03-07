@@ -16,7 +16,7 @@ define (require) ->
 
   $ = require 'amdquery!morpheus,bonzo'
   $z = require 'zest'
-  QueueState = require 'queuestate'
+  QueueState = require './queuestate'
 
   $z.create [$z.Component, QueueState],
     options:
