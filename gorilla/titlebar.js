@@ -23,9 +23,9 @@ Options
     QueueState = require('./queuestate');
     return $z.create([$z.Component, QueueState], {
       options: {
-        title: 'This is a title',
-        left: '<button>left</button><button>left2</button><p style="height: 100px;">hi</p>',
-        right: '<button>right</button><button>right2</button><p style="height: 100px;">hi</p>',
+        title: '',
+        left: '',
+        right: '',
         tDuration: 500
       },
       className: 'titlebar',

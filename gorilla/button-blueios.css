@@ -1,0 +1,70 @@
+/* titlebar buttons */
+button {
+  z-index: 10;
+  line-height: 29px;
+  height: 33px;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+  background-color: #1eb0e9;
+  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #0984c6 100%);
+  background-image: linear-gradient(to bottom, #1eb0e9 0, #0984c6 100%);
+  border: 1px solid #0e5895;
+  box-shadow: 0 1px rgba(255, 255, 255, .25);
+  border-radius: 3px;
+  padding: 2px 6px 3px;
+  cursor: pointer;
+  font: 12px "Helvetica Neue", sans-serif;
+}
+button:active {
+  padding: 3px 6px 2px;
+  color: #333;
+  background-color: #0876b1;
+  background-image: none;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, .2);
+}
+button.next {
+  border-top-right-radius: 10px 15px;
+  border-bottom-right-radius: 10px 15px;
+  border-right: 0;
+  margin-right: 7px;
+  padding-right: 7px;
+}
+button.prev {
+  border-top-left-radius: 10px 15px;
+  border-bottom-left-radius: 10px 15px;
+  border-left: 0;
+  margin-left: 7px; 
+  padding-left: 7px;
+}
+button.next::before,
+button.prev::after {
+  top: 7px;
+  position: absolute;
+  content: '';
+  border-top: 1.5px solid rgba(255, 255, 255, .25);
+  width: 28px;
+  height: 28px;
+  border-radius: 30px 100px 2px 40px / 2px 40px 30px 100px;
+  box-shadow: inset 1px 0 #0e5895, inset 0 1px #0e5895;
+  -webkit-mask-image: -webkit-gradient(linear, left top, right bottom, from(#000), color-stop(.33, #000), color-stop(.5, transparent), to(transparent));
+  mask-image: gradient(linear, left top, right bottom, from(#000), color-stop(.33, #000), color-stop(.5, transparent), to(transparent));
+}
+button.next::before {
+  right: 7px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
+  background-image: gradient(linear, left bottom, right top, from(#1eb0e9), to(#0984c6));
+  -webkit-transform: rotate(135deg) skew(-10deg, -10deg);
+  transform: rotate(135deg) skew(-10deg, -10deg);
+}
+button.prev::after {
+  left: 7px;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
+  background-image: gradient(linear, left bottom, right top, from(#0984c6), to(#1eb0e9));
+  -webkit-transform: rotate(315deg) skew(-10deg, -10deg);
+  transform: rotate(315deg) skew(-10deg, -10deg);
+}
+button.next:active::before,
+button.prev:active::after {
+  background-color: #0876b1;
+  background-image: none;
+}
