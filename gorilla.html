@@ -10,13 +10,13 @@
       var baseState = {
         title: 'Home Page', 
         left: {
-          render: '@~/gorilla/button',
+          render: '@gorilla/button',
           options: {
             text: 'Options'
           }
         },
         right: {
-          render: '@~/gorilla/button',
+          render: '@gorilla/button',
           options: {
             mode: 'next',
             text: 'Next Page',
@@ -30,7 +30,7 @@
       var nextState = {
         title: 'Next Page', 
         left: {
-          render: '@~/gorilla/button',
+          render: '@gorilla/button',
           options: {
             mode: 'prev',
             text: 'Previous Page',
@@ -43,6 +43,6 @@
 
 
 
-      $z.render('@~/gorilla/titlebar-blueios', baseState, document.body, function(_titlebar) { titlebar = _titlebar; });
+      $z.render('@gorilla/titlebar-blueios', baseState, document.body, function(_titlebar) { titlebar = _titlebar; });
     });
   </script>
