@@ -1,0 +1,48 @@
+
+body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  zoom: 1;
+  margin: 0;
+}
+
+header.titlebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+header.titlebar > div > * {
+  display: inline-block;
+  vertical-align: top;
+}
+header.titlebar .title-left {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+header.titlebar .title-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+header.titlebar .title-right {
+  z-index: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: right;
+}
+header.titlebar .new {
+  opacity: 0;
+}
+header.titlebar .boxsize {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}

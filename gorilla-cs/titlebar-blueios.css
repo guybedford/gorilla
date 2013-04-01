@@ -1,0 +1,54 @@
+body {
+  padding-top: 44px;
+}
+header.titlebar.blueios {
+  height: 44px;
+}
+header.titlebar > div {
+  padding: 5px;
+}
+header.titlebar.blueios {
+  background-color: #1eb0e9;
+  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #109adc 100%);
+  background-image: linear-gradient(to bottom, #1eb0e9 0, #109adc 100%);
+
+  border-bottom: 1px solid #0e5895;
+
+  box-shadow: inset 0 1px 1px -1px rgba(255, 255, 255, .8);
+}
+
+header.titlebar.blueios > div {
+  height: 44px;
+}
+header.titlebar.blueios .title-center h1 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 34px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 -1px rgba(0, 0, 0, .5);
+  white-space: nowrap;
+  text-rendering: optimizeLegibility;
+  font-family: "Helvetica Neue", sans-serif;
+  margin: 0;
+  font-weight: 500;
+}
+
+
+
+/* titlebar buttons */
+header.titlebar button {
+  z-index: 10;
+  font-size: 12px;
+  line-height: 23px;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+  background-color: #1eb0e9;
+  background-image: -webkit-linear-gradient(top, #1eb0e9 0, #0984c6 100%);
+  background-image: linear-gradient(to bottom, #1eb0e9 0, #0984c6 100%);
+  border: 1px solid #0e5895;
+  box-shadow: 0 1px rgba(255, 255, 255, .25);
+}
+header.titlebar button:active {
+  background-color: #0876b1;
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <script src="http://dev.jspm.io/require.js"></script>
+
+  <script>
+    require(['zest'], function($z) { 
+      window.$z = $z;
+      var titlebar;
+
+      var baseState = {
+        title: 'Home Page', 
+        left: {
+          render: '@~/gorilla/button',
+          options: {
+            text: 'Options'
+          }
+        },
+        right: {
+          render: '@~/gorilla/button',
+          options: {
+            mode: 'next',
+            text: 'Next Page',
+            click: function() {
+              titlebar.slideLeft(nextState);
+            }
+          }
+        }
+      };
+
+      var nextState = {
+        title: 'Next Page', 
+        left: {
+          render: '@~/gorilla/button',
+          options: {
+            mode: 'prev',
+            text: 'Previous Page',
+            click: function() {
+              titlebar.slideRight(baseState);
+            }
+          }
+        }
+      };
+
+
+
+      $z.render('@~/gorilla/titlebar-blueios', baseState, document.body, function(_titlebar) { titlebar = _titlebar; });
+    });
+  </script>

@@ -1,0 +1,11 @@
+{
+  "name": "gorilla",
+  "volo": {
+    "dependencies": {
+      "amdquery": "guybedford/amdquery",
+      "morpheus": "guybedford/morpheus-amd",
+      "bonzo": "guybedford/bonzo-amd",
+      "bean": "guybedford/bean-amd"
+    }
+  }
+}
